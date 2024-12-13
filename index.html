@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图片压缩工具</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- 头部标题 -->
+        <header>
+            <h1>图片压缩工具</h1>
+            <p>简单、高效的图片压缩服务</p>
+        </header>
+
+        <!-- 上传区域 -->
+        <div class="upload-area" id="uploadArea">
+            <input type="file" id="imageInput" accept="image/png,image/jpeg" hidden multiple>
+            <div class="upload-box">
+                <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" class="upload-icon">
+                    <circle cx="32" cy="32" r="30" stroke="currentColor" stroke-width="2" stroke-dasharray="4 4"/>
+                    <path d="M32 44V20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    <path d="M22 30L32 20L42 30" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <line x1="18" y1="44" x2="46" y2="44" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                <p>点击或拖拽图片到此处（支持多选）</p>
+                <p class="sub-text">支持 PNG、JPG 格式</p>
+            </div>
+        </div>
+
+        <!-- 预览和控制区域 -->
+        <div class="preview-container" id="previewContainer" style="display: none;">
+            <!-- 批量操作按钮 -->
+            <div class="batch-controls">
+                <button id="compressAllBtn" class="primary-btn">压缩全部</button>
+                <button id="downloadAllBtn" class="primary-btn">下载全部</button>
+                <button id="clearAllBtn" class="secondary-btn">清除全部</button>
+            </div>
+            <!-- 图片列表 -->
+            <div class="images-list" id="imagesList">
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
